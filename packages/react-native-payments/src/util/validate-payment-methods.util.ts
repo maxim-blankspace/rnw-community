@@ -1,4 +1,4 @@
-import { isDefined } from '@rnw-community/shared';
+import { isDefined } from '../shared';
 
 import { ConstructorError } from '../error/constructor.error';
 

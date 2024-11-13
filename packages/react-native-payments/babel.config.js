@@ -1,1 +1,3 @@
-module.exports = require('../shared/babel.config');
+module.exports = {
+    presets: ['module:metro-react-native-babel-preset']
+};

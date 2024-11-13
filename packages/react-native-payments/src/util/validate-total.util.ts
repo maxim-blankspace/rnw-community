@@ -1,4 +1,4 @@
-import { type ClassType, isDefined, isNumber } from '@rnw-community/shared';
+import { type ClassType, isDefined, isNumber } from '../shared';
 
 import { isValidDecimalMonetaryValue } from './is-valid-decimal-monetary-value.util';
 

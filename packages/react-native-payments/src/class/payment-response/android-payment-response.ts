@@ -1,4 +1,4 @@
-import { isDefined } from '@rnw-community/shared';
+import { isDefined } from '../../shared';
 
 import { type AndroidCardInfo, emptyAndroidCardInfo } from '../../@standard/android/response/android-card-info';
 import { emptyAndroidIntermediateSigningKey } from '../../@standard/android/response/android-intermediate-signing-key';

@@ -18,6 +18,11 @@ static const PKPaymentNetwork PKPaymentNetworkUnknown = 0;
     return dispatch_get_main_queue();
 }
 
+RCT_EXPORT_METHOD(setApiEndpoint:(NSString *)endpoint) {
+    [BMSAPI instance].endpoint = endpoint;
+    NSLog(@"BMSAPI endpoint set to: %@", endpoint);
+}
+
 RCT_EXPORT_METHOD(show:(NSString *)methodDataString
                         details:(NSDictionary *)details
                         resolve:(RCTPromiseResolveBlock)resolve

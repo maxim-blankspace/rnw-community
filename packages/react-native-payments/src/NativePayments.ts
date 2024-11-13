@@ -13,6 +13,7 @@ export interface Spec extends TurboModule {
     complete: (paymentComplete: string) => Promise<void>;
     // eslint-disable-next-line @typescript-eslint/no-wrapper-object-types,@typescript-eslint/ban-types
     show: (methodData: string, details: Object) => Promise<string>;
+    setApiEndpoint:(url: string) => void;
 }
 
 // ts-prune-ignore-next

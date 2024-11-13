@@ -1,4 +1,4 @@
-import { isNotEmptyString } from '@rnw-community/shared';
+import { isNotEmptyString } from "../../shared"
 
 import { emptyAndroidPaymentMethodToken } from '../../@standard/android/response/android-payment-method-token';
 import { emptyIosPaymentData } from '../../@standard/ios/response/ios-payment-data';

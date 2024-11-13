@@ -2,7 +2,7 @@
 import { Platform } from 'react-native';
 import uuid from 'react-native-uuid';
 
-import { emptyFn, getErrorMessage, isDefined, isNotEmptyArray, isNotEmptyString } from '@rnw-community/shared';
+import { emptyFn, getErrorMessage, isDefined, isNotEmptyArray, isNotEmptyString } from '../../shared';
 
 import { AndroidPaymentMethodTokenizationType } from '../../@standard/android/enum/android-payment-method-tokenization-type.enum';
 import { defaultAndroidPaymentDataRequest } from '../../@standard/android/request/android-payment-data-request';

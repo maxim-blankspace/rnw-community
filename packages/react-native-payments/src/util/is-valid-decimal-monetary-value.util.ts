@@ -1,6 +1,6 @@
 import isDecimal from 'validator/es/lib/isDecimal';
 
-import { isNumber, isString } from '@rnw-community/shared';
+import { isNumber, isString } from '../shared';
 
 import type { AmountValue } from '../type/amount-value.type';
 

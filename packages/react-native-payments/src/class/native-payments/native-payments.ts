@@ -1,6 +1,6 @@
 import { NativeModules, Platform } from 'react-native';
 
-import { isDefined } from '@rnw-community/shared';
+import { isDefined } from '../../shared';
 
 import type { Spec } from '../../NativePayments';
 
