@@ -17,6 +17,8 @@
         "cross platform",
         "react native payments"
     ],
+    "author": "blankspace",
+    "homepage": "https://blankspace.com/#readme",
     "license": "MIT",
     "exports": {
         ".": {
@@ -70,7 +72,7 @@
     },
     "gitHead": "b5608910319390f9773a9d42c3cc828e8e8a1d95",
     "dependencies": {
-        "@rnw-community/shared": "workspace:*",
+        "@rnw-community/shared": "file:../shared",
         "react-native-uuid": "^2.0.1",
         "validator": "^13.9.0"
     },
