@@ -2,6 +2,7 @@
 
 #import <React/RCTLog.h>
 #import <Foundation/Foundation.h>
+#import <BoltMobileSDK/BoltMobileSDK.h>
 
 // TODO: Add logs
 @implementation Payments
@@ -255,15 +256,26 @@ RCT_EXPORT_METHOD(canMakePayments: (NSString *)methodDataString
 
     // TODO: Add shippingMethod
 
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:paymentDict options:NSJSONWritingPrettyPrinted error:&error];
+    [[BMSAPI instance] generateTokenForApplePay:(PKPayment *)payment completion:^(NSString * _Nullable token, NSError * _Nullable error) {
+            if (token) {
+                paymentDict[@"cardpointeToken"] = token;
+                NSError *error;
+                NSData *jsonData = [NSJSONSerialization dataWithJSONObject:paymentDict options:NSJSONWritingPrettyPrinted error:&error];
+                
+                if (!jsonData) {
+                    [self rejectPromise:@"json_serialization_error" message:@"Failed to serialize PKPayment to JSON." error:error];
+                } else {
+                    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+                    self.paymentResolve(jsonString);
+                }
+            }
+            else
+            {
+                [self rejectPromise:@"token_generation_error" message:@"Failed to generate Cardpointe Apple Pay token." error:error];
+            }
+        }];
 
-    if (!jsonData) {
-        [self rejectPromise:@"json_serialization_error" message:@"Failed to serialize PKPayment to JSON." error:error];
-    } else {
-        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        self.paymentResolve(jsonString);
-    }
+
 
     self.paymentReject = nil;
     self.paymentResolve = nil;
