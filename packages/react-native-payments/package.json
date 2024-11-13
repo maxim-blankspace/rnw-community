@@ -1,6 +1,6 @@
 {
     "name": "@rnw-community/react-native-payments",
-    "version": "0.77.0",
+    "version": "0.78.0",
     "description": "React Native Payments",
     "keywords": [
         "react",
@@ -17,12 +17,6 @@
         "cross platform",
         "react native payments"
     ],
-    "author": "Vitalii Yehorov <vitalyiegorov@gmail.com> (https://github.com/rnw-community/rnw-community/packages/react-native-payments)",
-    "homepage": "https://github.com/rnw-community/rnw-community/tree/master/packages/react-native-payments",
-    "repository": "https://github.com/rnw-community/rnw-community/tree/master/packages/react-native-payments",
-    "bugs": {
-        "url": "https://github.com/rnw-community/rnw-community/issues"
-    },
     "license": "MIT",
     "exports": {
         ".": {
